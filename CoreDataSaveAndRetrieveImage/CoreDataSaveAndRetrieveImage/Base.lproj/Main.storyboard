@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataSaveAndRetrieveImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JEJ-3f-Ghc">
+                                <rect key="frame" x="0.0" y="222" width="393" height="430"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jj-T7-L27">
+                                <rect key="frame" x="16" y="679" width="361" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="ztA-Xc-J2b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ8-ci-e10">
+                                <rect key="frame" x="72" y="746" width="249" height="58"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="r89-MK-fEV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Retrieve Image" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="retrieveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VIi-Wh-qke"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Save &amp; Retrieve Data To Core Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85x-w4-fnE">
+                                <rect key="frame" x="0.0" y="70" width="393" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="u4g-vG-av1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCP-5f-vNA">
+                                <rect key="frame" x="72" y="143" width="249" height="58"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="jYW-g3-Yfh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Choose Image" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yfv-1Y-t27"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RCP-5f-vNA" firstAttribute="top" secondItem="85x-w4-fnE" secondAttribute="bottom" constant="32" id="6U9-LL-ZFh"/>
+                            <constraint firstItem="85x-w4-fnE" firstAttribute="leading" secondItem="JEJ-3f-Ghc" secondAttribute="leading" id="6pJ-aK-BlE"/>
+                            <constraint firstItem="RCP-5f-vNA" firstAttribute="trailing" secondItem="wZ8-ci-e10" secondAttribute="trailing" id="Cx6-c1-drF"/>
+                            <constraint firstItem="RCP-5f-vNA" firstAttribute="leading" secondItem="wZ8-ci-e10" secondAttribute="leading" id="DaZ-6x-1Yy"/>
+                            <constraint firstItem="1Jj-T7-L27" firstAttribute="top" secondItem="JEJ-3f-Ghc" secondAttribute="bottom" constant="27" id="HSI-kl-bOc"/>
+                            <constraint firstItem="1Jj-T7-L27" firstAttribute="centerX" secondItem="wZ8-ci-e10" secondAttribute="centerX" id="KkP-00-djD"/>
+                            <constraint firstItem="85x-w4-fnE" firstAttribute="centerX" secondItem="RCP-5f-vNA" secondAttribute="centerX" id="NBj-ya-jU0"/>
+                            <constraint firstItem="85x-w4-fnE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O4p-vo-UyI"/>
+                            <constraint firstItem="wZ8-ci-e10" firstAttribute="top" secondItem="1Jj-T7-L27" secondAttribute="bottom" constant="30" id="TGg-OL-Y8S"/>
+                            <constraint firstItem="85x-w4-fnE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="Yaw-YH-IS9"/>
+                            <constraint firstItem="JEJ-3f-Ghc" firstAttribute="top" secondItem="RCP-5f-vNA" secondAttribute="bottom" constant="21" id="i8L-0Q-MOv"/>
+                            <constraint firstItem="RCP-5f-vNA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="jV6-Qo-ySe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wZ8-ci-e10" secondAttribute="bottom" constant="14" id="mRJ-Yh-kpK"/>
+                            <constraint firstItem="85x-w4-fnE" firstAttribute="trailing" secondItem="JEJ-3f-Ghc" secondAttribute="trailing" id="tp6-Cy-I4L"/>
+                            <constraint firstItem="1Jj-T7-L27" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wQ2-jB-aCT"/>
+                            <constraint firstItem="1Jj-T7-L27" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wzN-Jd-NHX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseBTn" destination="RCP-5f-vNA" id="5vR-ME-JzA"/>
+                        <outlet property="myImage" destination="JEJ-3f-Ghc" id="eHw-tU-8Mc"/>
+                        <outlet property="myStatus" destination="1Jj-T7-L27" id="Bac-g0-9HI"/>
+                        <outlet property="retrieveBtn" destination="wZ8-ci-e10" id="BWm-fO-JyG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
